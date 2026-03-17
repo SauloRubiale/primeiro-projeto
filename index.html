@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Converter</title>
+
+    <link href="bootstrap-5.3.8-dist/css/bootstrap.min.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="card p-4 mx-auto shadow" style="max-width: 400px">
+        <h1 class="text-center mb-4">Conversor</h1>
+
+        <input
+          type="number"
+          id="valor"
+          class="form-control mb-3"
+          placeholder="Valor em Euro (€)"
+        />
+
+        <button id="botao-converter" class="btn btn-success w-100">
+          Converter para Real
+        </button>
+
+        <div id="resultado" class="mt-4 text-center fw-bold"></div>
+      </div>
+    </div>
+
+    <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
