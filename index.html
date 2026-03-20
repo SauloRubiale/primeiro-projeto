@@ -4,56 +4,73 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Converter</title>
-
     <link href="Bootstrap/css/bootstrap.min.css" rel="stylesheet" />
   </head>
   <body>
-    <div
+    <main
       class="container d-flex justify-content-center align-items-center vh-100"
     >
-      <div class="card p-4 shadow-lg" style="width: 25rem">
-        <h2 class="text-center mb-4">Conversor de Moedas</h2>
+      <section class="card p-4 shadow-lg" style="width: 25rem">
+        <header>
+          <h2 class="text-center mb-4">Conversor de Moedas</h2>
+        </header>
 
-        <input
-          type="number"
-          id="euro"
-          class="form-control mb-3"
-          placeholder="Valor em Euro (€)"
-        />
-
-        <input
-          type="number"
-          id="dolar"
-          class="form-control mb-3"
-          placeholder="Valor em dólar ($)"
-        />
-
-        <div class="d-flex gap-2 justify-content-center">
-          <button id="botao-converter-euro" class="btn btn-outline-primary">
-            Converter Euro
-          </button>
-          <button id="botao-converter-dolar" class="btn btn-outline-success">
-            Converter Dólar
-          </button>
-        </div>
-
-        <div class="d-flex justify-content-center mt-4">
-          <div>
-            <div id="resultadoEuro" class="text-start fw-bold mb-2"></div>
-            <div id="resultadoDolar" class="text-start fw-bold"></div>
+        <form id="conversor-form">
+          <div class="mb-3">
+            <label for="euro" class="form-label">Valor em Euro (€)</label>
+            <input
+              type="number"
+              id="euro"
+              class="form-control"
+              placeholder="0.00"
+            />
           </div>
+
+          <div class="mb-3">
+            <label for="dolar" class="form-label">Valor em Dólar ($)</label>
+            <input
+              type="number"
+              id="dolar"
+              class="form-control"
+              placeholder="0.00"
+            />
+          </div>
+
+          <nav
+            class="d-flex gap-2 justify-content-center"
+            aria-label="Ações de conversão"
+          >
+            <button
+              type="button"
+              id="botao-converter-euro"
+              class="btn btn-outline-primary"
+            >
+              Converter Euro
+            </button>
+            <button
+              type="button"
+              id="botao-converter-dolar"
+              class="btn btn-outline-success"
+            >
+              Converter Dólar
+            </button>
+          </nav>
+        </form>
+
+        <div class="mt-4 p-2 bg-light rounded text-center">
+          <output id="resultadoEuro" class="d-block fw-bold mb-2"></output>
+          <output id="resultadoDolar" class="d-block fw-bold"></output>
         </div>
 
-        <div class="d-grid">
+        <footer class="d-grid">
           <button id="botao-limpar" class="btn btn-outline-dark mt-4">
             Limpar tudo
           </button>
-        </div>
-      </div>
-    </div>
+        </footer>
+      </section>
+    </main>
 
     <script src="Bootstrap/js/bootstrap.bundle.min.js"></script>
-
     <script src="script.js"></script>
   </body>
 </html>
